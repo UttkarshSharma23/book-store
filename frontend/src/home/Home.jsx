@@ -1,13 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import Banner from '../components/Banner'
 
 const Home = () => {
     return (
         <>
-            <nav>
-                Site logo
-            </nav>
-            <Outlet />
+            <div>
+                <Banner/>
+            </div>
         </>
     )
 }
