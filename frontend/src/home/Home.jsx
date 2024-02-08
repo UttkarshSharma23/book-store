@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import BestSellerBooks from './FavoriteBooks'
+import BestSellerBooks from './BestSellerBooks'
+import FavBook from './FavBook'
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <div>
                 <Banner/>
                 <BestSellerBooks/>
+                <FavBook/>
             </div>
         </>
     )
