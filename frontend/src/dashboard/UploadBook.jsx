@@ -26,7 +26,7 @@ const UploadBook = () => {
     "Art and Design"
   ]
 
-  const [selectedBookCategory, setSelectedBookCategory] = useState(bookCategories[0]);
+  const [selectedBookCategory,setSelectedBookCategory] = useState(bookCategories[0]);
 
 
   // Function :Selecting the value from the dropdown box 
