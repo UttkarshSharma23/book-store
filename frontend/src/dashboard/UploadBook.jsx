@@ -55,7 +55,7 @@ const UploadBook = () => {
     console.log(bookObj);
 
 
-    // Conecting to Database to store the data
+    //Database Connection Function: Conecting to Database to store the data
     fetch("http://localhost:5000/upload-book",
       {
         method: "POST",
@@ -163,15 +163,14 @@ const UploadBook = () => {
         {/*----------------------------------------------- 4th Row ends Here -------------------------------------------------------*/}
 
         {/*----------------------------------------------- 5th Row Starts Here -------------------------------------------------------*/}
+        {/* Upload button */}
         <Button type='submit' className='mt-5'>
           Upload Book
         </Button>
         {/*----------------------------------------------- 5th Row ends Here -------------------------------------------------------*/}
 
       </form>
-
     </div>
   )
 }
-
 export default UploadBook
