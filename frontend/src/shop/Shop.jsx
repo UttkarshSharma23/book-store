@@ -26,7 +26,7 @@ const Shop = () => {
               <p>{book.bookDescription}</p>
             </p>
 
-            <button className='bg-blue-700 font-semibold text-white py-2 rounded'>Buy NoW</button>
+            <button className='bg-blue-700 font-semibold text-white py-2 rounded'>Buy Now</button>
           </Card>)
         }
       </div>
