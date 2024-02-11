@@ -64,7 +64,7 @@ const SignUp = () => {
             <div className="relative">
               <input id="password" name="password" type="password" className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
             </div>
-            <p>If you hava an account. Please <Link to='/login' className='text-blue-600 underline'>Login</Link> </p>
+            <p>If you have an account. Please <Link to='/login' className='text-blue-600 underline'>Login</Link> </p>
             <div className="relative"> 
               <button className="bg-cyan-500 text-white rounded-md px-6 py-2">Sign Up</button>
             </div>
