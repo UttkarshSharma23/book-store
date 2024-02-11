@@ -6,7 +6,7 @@ import googleLogo from "../assets/google-logo.svg"
 const Login = () => {
 // Defined in AuthContext for creating the user , thus using this as createUser.
 const {login,loginWithGoogle} = useContext(AuthContext)
-const [error,setError] = useState("error");
+const [error,setError] = useState("");
 const location = useLocation();
 const navigate = useNavigate();
 
@@ -28,6 +28,7 @@ const handleLogin = (event) =>{
     }).catch((error)=>{
         const errorCode = error.code;
         const errorMessage = error.message;
+        setError(errorMessage)
     })
     
 }
@@ -65,6 +66,11 @@ const handleRegister= ()=>{
             <div className="relative">
               <input id="password" name="password" type="password" className="peer  h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
             </div>
+            {/* Error message if wrong email/password enter */}
+            {
+              error ? <p className='text-red-600 text-base'>email or password is not correct </p> : ""
+            }
+           
             <p>If you haven't have an account. Please <Link to='/sign-up' className='text-blue-600 underline'>Sign Up</Link> </p>
             <div className="relative"> 
               <button className="bg-cyan-500 text-white rounded-md px-6 py-2">Login</button>

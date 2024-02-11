@@ -31,7 +31,7 @@ const UploadBook = () => {
 
   // Function :Selecting the value from the dropdown box 
   const handleChangeSelectedValue = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setSelectedBookCategory(event.target.value);
   }
 
@@ -52,7 +52,7 @@ const UploadBook = () => {
     const bookObj = {
       bookTitle, authorName, imageURL, category,bookDescription ,bookPDFURL 
     }
-    console.log(bookObj);
+    // console.log(bookObj);
 
 
     //Database Connection Function: Conecting to Database to store the data

@@ -14,7 +14,7 @@ const ManageBooks = () => {
 
   // Delete button Functionality
   const handleDelete=(id)=>{
-    console.log(id);
+    // console.log(id);
     fetch(`http://localhost:5000/book/${id}`,
     {
       method:"DELETE",

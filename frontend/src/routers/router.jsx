@@ -18,6 +18,9 @@ import EditBooks from "../dashboard/EditBooks";
 import SignUp from "../components/SignUp";
 import Login from "../components/Login";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Logout from "../components/Logout";
+import Users from "../dashboard/Users";
+import Products from "../dashboard/Products";
 
 const router = createBrowserRouter([
     {
@@ -50,12 +53,12 @@ const router = createBrowserRouter([
     },
     // Admin routing page
     {
-        path:"admin/dashboard",
+        path:"/admin/dashboard",
         element:<DashboardLayout/>,
         children:[
             {
                 path: "/admin/dashboard",
-                element:<PrivateRoute><DashboardLayout/></PrivateRoute>
+                element:<PrivateRoute><Dashboard/></PrivateRoute>
             },
             {
                 path:"/admin/dashboard/upload",
@@ -70,7 +73,16 @@ const router = createBrowserRouter([
                 element:<EditBooks/>,
                 // using the specific id will be able to target the specific books
                 loader:({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+            },
+            {
+                path:"/admin/dashboard/users",
+                element:<Users/>
+            },
+            {
+                path:"/admin/dashboard/products",
+                element:<Products/>
             }
+
         ]
     },
     //SignUp auth routing
@@ -82,6 +94,10 @@ const router = createBrowserRouter([
     {
         path: "login",
         element:<Login/>
+    },
+    {
+        path:"logout",
+        element:<Logout/>
     }
 
 ])

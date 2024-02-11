@@ -13,7 +13,7 @@ const Navbar = () => {
     const [isSticky,setIsSticky] = useState(false);
 
     const {user} = useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
 
     // toogle menu
     const toggleMenu = () =>{

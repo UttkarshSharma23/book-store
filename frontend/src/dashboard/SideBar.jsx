@@ -3,11 +3,20 @@ import { Sidebar } from 'flowbite-react';
 import { BiBuoy } from 'react-icons/bi';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
 import admin from '../assets/me.jpeg'
+import { useContext } from 'react';
+import {AuthContext} from "../context/AuthProvider"
 const SideBar = () => {
+
+    const {user} = useContext(AuthContext)
+    // console.log(user);
+
     return (
         <Sidebar aria-label="Sidebar with content separator example">
-            <Sidebar.Logo href="#" img={admin} imgAlt="Flowbite logo">
-                Uttkarsh Sharma
+            <Sidebar.Logo href="/" img={user?.photoURL} imgAlt="logo" className='w-16 h-16'>
+               <p>{
+                user?.displayName || "Demo User"
+                }
+                </p>
             </Sidebar.Logo>
             <Sidebar.Items>
                 {/*--------------------review Dashboard--------------------------- */}
@@ -27,11 +36,11 @@ const SideBar = () => {
                     </Sidebar.Item>
 
                     {/*---------------------review Users--------------------------------------- */}
-                    <Sidebar.Item href="#" icon={HiUser}>
+                    <Sidebar.Item href="/admin/dashboard/users" icon={HiUser}>
                         Users
                     </Sidebar.Item>
 
-                    <Sidebar.Item href="#" icon={HiShoppingBag}>
+                    <Sidebar.Item href="/admin/dashboard/products" icon={HiShoppingBag}>
                         Products
                     </Sidebar.Item>
 
@@ -43,19 +52,6 @@ const SideBar = () => {
                     {/* ---------------------------review Logout--------------------------- */}
                     <Sidebar.Item href="/logout" icon={HiTable}>
                         Log Out
-                    </Sidebar.Item>
-                </Sidebar.ItemGroup>
-
-
-                <Sidebar.ItemGroup>
-                    <Sidebar.Item href="#" icon={HiChartPie}>
-                        Upgrade to Pro
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiViewBoards}>
-                        Documentation
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={BiBuoy}>
-                        Help
                     </Sidebar.Item>
                 </Sidebar.ItemGroup>
             </Sidebar.Items>

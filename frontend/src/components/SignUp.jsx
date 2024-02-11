@@ -73,7 +73,7 @@ const SignUp = () => {
           {/* button division using Google */}
           <div className='flex w-full items-center flex-col mt-5 gap-3'>
             <button onClick={handleRegister}
-            className='block'><img src={googleLogo} alt="" className='w-12 h-12 inline-block' />Login with Google</button>
+            className='block'><img src={googleLogo} alt="" className='w-12 h-12 inline-block' />Signup with Google</button>
           </div>
         </div>
       </div>
