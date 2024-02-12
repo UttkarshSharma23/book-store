@@ -12,7 +12,7 @@ import { Pagination } from 'swiper/modules';
 // react icons
 import {FaStar} from "react-icons/fa6"
 import {Avatar} from "flowbite-react"
-import img from "../assets/profile.jpg"
+import img from "../assets/me.jpeg"
 
 const Review = () => {
   return (
