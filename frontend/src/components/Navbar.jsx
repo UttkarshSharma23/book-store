@@ -67,9 +67,12 @@ const Navbar = () => {
                 {/* button for large devices */}
                 <div className='space-x-12 block lg:flex items-center'>
                     <button><FaBarsStaggered className='w-5 hover:text-blue-700'/></button>
-                    {
-                        user? user.email: ""
-                    }
+                    <p className='mr-30'>
+                        {
+                        user ? user.email: ""
+                        }
+                    </p>
+                    
                 </div>
 
                 {/* Menu button  for mobile devices */}

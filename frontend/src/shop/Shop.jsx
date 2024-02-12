@@ -10,7 +10,7 @@ const Shop = () => {
 
   return (
     <div className='mt-28 px-4 lg:px24'>
-      <h2 className='ext-5xl font-bold text-center'>All Books are here</h2>
+      <h2 className='text-5xl font-bold text-center'>All Books are here</h2>
 
       {/* mapping the books data */}
       <div className='grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3  grid-cols-1'>
