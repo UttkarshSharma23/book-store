@@ -6,7 +6,7 @@ import { IoBookSharp } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaXmark } from "react-icons/fa6";
 import { AuthContext } from '../context/AuthProvider';
-
+import '../utils/navbar.css'
 
 const Navbar = () => {
     const [ismenuOpen,setMenuOpen] = useState(false);
@@ -55,17 +55,17 @@ const Navbar = () => {
         <nav className={`py-4  lg:px-24 px-4 ${isSticky ? "sticky top-0 left-0 right-0 bg-blue-300" : ""}`}>
             <div className='flex justify-betwen  items-center text-base gap-8'>
                 {/* logo */}
-                <Link to="/" className='text-2xl font-bold text-blue-700 flex items-center gap-2'><IoBookSharp className='inline-block'/>Books</Link>
+                <Link to="/" className='text-2xl font-bold text-blue-700 flex items-center gap-2 mr-10'><IoBookSharp className='inline-block'/>Books</Link>
 
                 {/* Nav items for large devices */}
-                <ul className='md:flex space-x-12  items-center hidden  '>
+                <ul  className='navbar'>
                     {
                         navItems.map(({link,path}) => <Link key ={path} to={path} className='block text-base  text-black uppercase cursor-pointer hover:text-blue-700'>{link}</Link>)
                     }
                 </ul>
 
                 {/* button for large devices */}
-                <div className='space-x-12 hidden lg:flex items-center'>
+                <div className='fabtn'>
                     <button><FaBarsStaggered className='w-5 hover:text-blue-700'/></button>
                     <p className='mr-30'>
                         {
@@ -91,7 +91,6 @@ const Navbar = () => {
                             navItems.map(({link,path})=> <Link key ={path} to={path} className='block text-base  text-white uppercase cursor-pointer '>  {link} </Link>)
                         }
                     </div>
-
         </nav>
     </header>
   )

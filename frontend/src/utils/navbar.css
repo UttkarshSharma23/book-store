@@ -1,0 +1,22 @@
+/* Hide the navbar on screens below 640px */
+@media (max-width: 640px) {
+    .navbar {
+      display: none;
+    }
+    .fabtn{
+        display: none;
+    }
+  }
+  
+  /* Show the navbar on screens above 640px */
+  @media (min-width: 641px) {
+    .navbar {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+    }
+    .fabtn{
+        display: flex;
+        margin-left: 2rem;
+    }
+  }
