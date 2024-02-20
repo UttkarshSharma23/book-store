@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 // react icons
@@ -58,14 +58,14 @@ const Navbar = () => {
                 <Link to="/" className='text-2xl font-bold text-blue-700 flex items-center gap-2'><IoBookSharp className='inline-block'/>Books</Link>
 
                 {/* Nav items for large devices */}
-                <ul className=' md:flex space-x-20 '>
+                <ul className='md:flex space-x-12  items-center hidden  '>
                     {
                         navItems.map(({link,path}) => <Link key ={path} to={path} className='block text-base  text-black uppercase cursor-pointer hover:text-blue-700'>{link}</Link>)
                     }
                 </ul>
 
                 {/* button for large devices */}
-                <div className='space-x-12 block lg:flex items-center'>
+                <div className='space-x-12 hidden lg:flex items-center'>
                     <button><FaBarsStaggered className='w-5 hover:text-blue-700'/></button>
                     <p className='mr-30'>
                         {
@@ -88,7 +88,7 @@ const Navbar = () => {
                     {/* navItems for small devices */}
                     <div className={`space-y-4 px-4 mt-16 py-7 bg-blue-700 ${ismenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
                         {
-                            navItems.map(({link,path})=> <Link key ={path} to={path} className='block text-base  text-white uppercase cursor-pointer'>  {link} </Link>)
+                            navItems.map(({link,path})=> <Link key ={path} to={path} className='block text-base  text-white uppercase cursor-pointer '>  {link} </Link>)
                         }
                     </div>
 
